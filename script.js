@@ -40,6 +40,13 @@ function draw() {
       strokeWeight(5)
       text("REV THE F*** OUT", random(-100, 100) + width / 2, random(-100, 100) + height / 2);
     }
+    if (stage == 3) {
+        background(200, 200, 255);
+        fill(0);
+        textSize(height/7)
+        strokeWeight(6)
+        text("Get ready, starting in " + (20 - round(secs)) ,  width / 2,  height / 2);
+      }
     count++
     if (count == 1100) {
       stage = 1;
@@ -51,6 +58,10 @@ function draw() {
       stage = 0;
       count = 0;
     }
+    if (round(secs) == 20) {
+        stage = 0;
+        count = 0;
+      }
 
   }
 
@@ -70,5 +81,6 @@ function draw() {
 }
 
 function mouseClicked() {
+  stage = 3;
   started = 1;
 }
