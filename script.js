@@ -16,7 +16,6 @@ stroke(0)
 
 function draw() {
   background(0);
-  console.log(count);
   fill(255);
   strokeWeight(5)
   text("Click to start", width / 2, height / 2);
