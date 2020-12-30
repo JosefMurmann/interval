@@ -55,7 +55,6 @@ function draw() {
   }
 
   
-  
   if (secs > 60) {
     secs = 0;
     timem++;
