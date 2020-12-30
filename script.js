@@ -26,13 +26,13 @@ function draw() {
       background(20, 200, 20);
       fill(255);
       strokeWeight(5)
-      text("Chill", random(20, 20) + width / 2, random(20, 20) + height / 2);
+      text("Chill", width / 2, 60 * sin(frameCount/20) + height / 2);
     }
     if (stage == 1) {
       background(255, 165, 0);
       fill(0);
       strokeWeight(5)
-      text("Push", random(-10, 10) + width / 2, random(-10, 10) + height / 2);
+      text("Push", random(-7, 7) + width / 2, random(-7, 7) + height / 2);
     }
     if (stage == 2) {
       background(255, 40, 40);
