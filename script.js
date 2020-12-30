@@ -22,6 +22,7 @@ function draw() {
   text("Click to start", width / 2, height / 2);
   if (started == 1) {
      secs += 1/30;
+     console.log(count)
     if (stage == 0) {
       background(20, 200, 20);
       fill(255);
@@ -58,7 +59,7 @@ function draw() {
       stage = 0;
       count = 0;
     }
-    if (round(secs) == 20) {
+    if (round(secs) == 20 && timem == 0) {
         stage = 0;
         count = 0;
       }
