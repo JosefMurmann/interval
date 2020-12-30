@@ -41,7 +41,7 @@ function draw() {
       text("REV THE F*** OUT", random(-100, 100) + width / 2, random(-100, 100) + height / 2);
     }
     count++
-    if (count == 900) {
+    if (count == 1100) {
       stage = 1;
     }
     if (count == 1800) {
