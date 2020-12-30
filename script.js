@@ -26,8 +26,7 @@ function draw() {
       background(20, 200, 20);
       fill(255);
       strokeWeight(5)
-      text("Chill", width / 2, 60 * sin(frameCount/20) + height / 2);
-      text("Cruise", width / 2, height / 2);
+      text("Cruise", width / 2, 60 * sin(frameCount/20) + height / 2);
     }
     if (stage == 1) {
       background(255, 165, 0);
