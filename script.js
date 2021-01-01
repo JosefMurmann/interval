@@ -103,7 +103,7 @@ function draw() {
   strokeWeight(1)
   textSize(windowHeight / 20);
   fill(20, 200, 20);
-  text("Cruiseing interval:" + round(cruiseslider.value()/30), width/2,70)
+  text("Cruising interval:" + round(cruiseslider.value()/30), width/2,70)
   fill(255, 165, 0);
   text("Push interval:" + round(pushslider.value()/30), width/2,170) 
   fill(255, 40, 40);
