@@ -29,8 +29,8 @@ stroke(0)
   cruise = cruiseslider.value();
   pushing = pushslider.value();
   sprint = sprintslider.value();
-  button = createButton('click to start');
   
+  button = createButton('click to start');
   button.style("text-align", "center");
   button.position(width/2, height/1.4);
   button.mousePressed(YEET);
