@@ -6,6 +6,8 @@ let timem = 0;
 let cruise = 0;
 let pushing = 0;
 let sprint = 0;
+let canvas;
+let start;
 
 function setup() {
 stroke(0)
@@ -18,26 +20,26 @@ stroke(0)
   cruiseslider = createSlider(0, 3600, 1500, 1);
   pushslider = createSlider(0, 3600, 1500, 1);
   sprintslider = createSlider(0, 1500, 210, 1);
-  cruiseslider.position(100, 10);
+  cruiseslider.position(100, height/10);
   cruiseslider.style('width', '80%');
-  pushslider.position(100, 110);
+  pushslider.position(100, height/10 + height/10);
   pushslider.style('width', '80%');
-  sprintslider.position(100, 210);
+  sprintslider.position(100, height/10 + height/10+ height/10);
   sprintslider.style('width', '80%');
   cruise = cruiseslider.value();
   pushing = pushslider.value();
   sprint = sprintslider.value();
+  button = createButton('click to start');
+  button.style("text-align", "center");
+  button.position(width/2, height/1.4);
+  button.mousePressed(YEET);
 }
 
 function draw() {
   
   background(50);
-  push();
-  fill(255);
-  strokeWeight(5)
-  textSize(height/20)
-  text("Press any key to start", width / 2, height / 1.2);
-  pop();
+
+  
   if (started == 1) {
      secs += 1/30;
      console.log(count)
@@ -103,11 +105,11 @@ function draw() {
   strokeWeight(1)
   textSize(windowHeight / 20);
   fill(20, 200, 20);
-  text("Cruising interval:" + round(cruiseslider.value()/30), width/2,70)
+  text("Cruising interval:" + round(cruiseslider.value()/30), width/2,height/10)
   fill(255, 165, 0);
-  text("Push interval:" + round(pushslider.value()/30), width/2,170) 
+  text("Push interval:" + round(pushslider.value()/30), width/2,height/10 + height/10) 
   fill(255, 40, 40);
-  text("Sprint interval:" + round(sprintslider.value()/30), width/2,270)  ;
+  text("Sprint interval:" + round(sprintslider.value()/30), width/2,height/10 +height/10 +height/10 )  ;
   pop();
   }
 
@@ -123,7 +125,7 @@ function draw() {
 
 }
 
-function keyPressed() {
+function YEET() {
   stage = 3;
   started = 2;
     cruise = round(cruiseslider.value());
@@ -132,5 +134,6 @@ function keyPressed() {
     cruiseslider.hide();
     pushslider.hide();
     sprintslider.hide();
+    button.hide();
   
 }
