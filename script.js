@@ -29,10 +29,12 @@ stroke(0)
   cruise = cruiseslider.value();
   pushing = pushslider.value();
   sprint = sprintslider.value();
-  
+
   button = createButton('click to start');
-  button.style("text-align", "center");
-  button.position(width/2, height/1.4);
+  button.style("width", "30%");
+  button.style("height", "10%");
+  button.position(width/3, height/1.4);
+  button.style("font-size", "200%");
   button.mousePressed(YEET);
 }
 
@@ -88,7 +90,7 @@ function draw() {
         fill(0);
         textSize(height/7)
         strokeWeight(6)
-        text("Get ready, starting in " + (20 - round(secs)) ,  width / 2,  height / 2);
+        text("Get ready:" + (20 - round(secs)) ,  width / 2,  height / 2);
         if (secs > 19.6){
             started = 1;
             stage = 0;
@@ -106,11 +108,11 @@ function draw() {
   strokeWeight(1)
   textSize(windowHeight / 20);
   fill(20, 200, 20);
-  text("Cruising interval:" + round(cruiseslider.value()/30), width/2,height/10)
+  text("Cruising interval:" + round(cruiseslider.value()/30), width/2,height/10 - 10)
   fill(255, 165, 0);
-  text("Push interval:" + round(pushslider.value()/30), width/2,height/10 + height/10) 
+  text("Push interval:" + round(pushslider.value()/30), width/2,height/10 + height/10 - 10) 
   fill(255, 40, 40);
-  text("Sprint interval:" + round(sprintslider.value()/30), width/2,height/10 +height/10 +height/10 )  ;
+  text("Sprint interval:" + round(sprintslider.value()/30), width/2,height/10 +height/10 +height/10 - 10 )  ;
   pop();
   }
 
