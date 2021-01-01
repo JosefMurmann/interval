@@ -17,9 +17,9 @@ stroke(0)
   textSize(windowHeight / 5);
   textAlign(CENTER);
   frameRate(30);
-  cruiseslider = createSlider(0, 3600, 1500, 1);
-  pushslider = createSlider(0, 3600, 1500, 1);
-  sprintslider = createSlider(0, 1500, 210, 1);
+  cruiseslider = createSlider(30, 3600, 1500, 1);
+  pushslider = createSlider(30, 3600, 1500, 1);
+  sprintslider = createSlider(30, 1500, 210, 1);
   cruiseslider.position(100, height/10);
   cruiseslider.style('width', '80%');
   pushslider.position(100, height/10 + height/10);
@@ -60,10 +60,13 @@ function draw() {
       text("Push", random(-7, 7) + width / 2, random(-7, 7) + height / 2);
     }
     if (stage == 2) {
+        push();
       background(255, 40, 40);
       fill(random(255, 0));
       strokeWeight(5)
-      text("REV THE F*** OUT", random(-100, 100) + width / 2, random(-100, 100) + height / 2);
+      textSize(height/10);
+      text("REV", random(-100, 100) + width / 2, random(-100, 100) + height / 2);
+      pop();
     }
 
     count++
