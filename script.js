@@ -30,7 +30,7 @@ stroke(0)
   pushing = pushslider.value();
   sprint = sprintslider.value();
 
-  button = createButton('click to start');
+  button = createButton('START');
   button.style("width", "30%");
   button.style("height", "10%");
   button.position(width/3, height/1.4);
@@ -92,7 +92,7 @@ function draw() {
         secs += 1/30;
         background(200, 200, 255);
         fill(0);
-        textSize(height/7)
+        textSize(height/10)
         strokeWeight(6)
         text("Get ready:" + (20 - round(secs)) ,  width / 2,  height / 2);
         if (secs > 19.6){
@@ -126,7 +126,7 @@ function draw() {
   stroke(0);
   strokeWeight(5)
   fill(255);
-  textSize(windowHeight / 15);
+  textSize(windowHeight / 20);
   text("Ellapsed Time: " + timem + ":" + round(secs), 20, height - (height / 30) - 10);
   pop();
 
