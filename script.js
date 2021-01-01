@@ -18,7 +18,7 @@ stroke(0)
   textAlign(CENTER);
   frameRate(30);
   cruiseslider = createSlider(30, 3600, 1500, 1);
-  pushslider = createSlider(30, 3600, 1500, 1);
+  pushslider = createSlider(30, 3600, 900, 1);
   sprintslider = createSlider(30, 1500, 210, 1);
   cruiseslider.position(100, height/10);
   cruiseslider.style('width', '80%');
